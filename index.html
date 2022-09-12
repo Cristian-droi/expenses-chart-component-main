@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link rel="stylesheet" href="./sass/styles.css" />
     <link
       rel="icon"
       type="image/png"
@@ -12,38 +12,51 @@
       href="./images/favicon-32x32.png"
     />
 
-    <title>Frontend Mentor | Expenses chart component</title>
-
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
+    <title>My balance</title>
   </head>
-  <body>
-    <section class="balance__container">
-      <div class="balance">
-        <p class="balance__title">My balance</p>
 
-        <p class="balance__total">0</p>
+  <body>
+    <main class="main-container">
+      <div class="balance">
+        <div>
+          <p class="balance__title">My balance</p>
+
+          <p class="balance__total">$921.48</p>
+        </div>
+        <img src="./images/logo.svg" alt="" class="balance__logo" />
       </div>
 
-      <div class="spending"></div>
-    </section>
+      <div class="chart">
+        <h2 class="chart__title">Spending - Last 7 days</h2>
 
-    My balance $921.48 Spending - Last 7 days mon tue wed thu fri sat sun Total
-    this month $478.33 +2.4% from last month
+        <div class="chart__bars-container">
+          <!--
+          <div class="chart__bar">
+            <div class="chart__bar--label">$35.20</div>
+            <div class="chart__bar--day">mon</div>
+          </div>
+          -->
+        </div>
+        <div class="chart__analitics">
+          <div>
+            <p class="chart__total">Total this month</p>
+            <p class="chart__total-value">$478.33</p>
+          </div>
 
-    <div class="attribution">
+          <div>
+            <p class="chart__porcental">+2.4%</p>
+            <p class="chart__period">from last month</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Cristian Morales</a>.
-    </div>
+    </footer>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
