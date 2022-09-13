@@ -29,11 +29,15 @@ bars.forEach((bar) => {
   }
 
   bar.addEventListener("mouseover", (event) => {
-    let labelElement = event.target.childNodes[1];
-    labelElement.style.display = "block";
+    if (event.target.className == "chart__bar") {
+      let labelElement = event.target.childNodes[1];
+      labelElement.style.display = "block";
+    }
   });
   bar.addEventListener("mouseout", (event) => {
-    let labelElement = event.target.childNodes[1];
-    labelElement.style.display = "none";
+    if (event.target.className == "chart__bar") {
+      let labelElement = event.target.childNodes[1];
+      labelElement.style.display = "none";
+    }
   });
 });
